@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FirstWeb.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -41,6 +42,29 @@ namespace FirstWeb.Domain
                     RoleId = "111adw43-k321-542a-aaaf-4g9f03vv0402",
                     UserId = "222adguu-2g21-h42a-a5af-11111vv35555"
                 });
+
+                modelBuilder.Entity<TextField>().HasData(new TextField
+                {
+                    Id = new Guid("11111111-1151-ddc2-a3af-2id93lvbd023"),
+                    CodeWord = "PageIndex",
+                    Title = "Главная"
+                });
+                
+                modelBuilder.Entity<TextField>().HasData(new TextField
+                {
+                    Id = new Guid("22222222-1151-ddc2-a3af-2id93lvbd023"),
+                    CodeWord = "PageServices",
+                    Title = "Услуги"
+                });
+                
+                modelBuilder.Entity<TextField>().HasData(new TextField
+                {
+                    Id = new Guid("33333333-1151-ddc2-a3af-2id93lvbd023"),
+                    CodeWord = "PageContacts",
+                    Title = "Контакты"
+                });
+                
+                
         }
     }
 }
