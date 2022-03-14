@@ -20,14 +20,14 @@ namespace FirstWeb.Domain
 
                 modelBuilder.Entity<IdentityRole>().HasData(new IdentityRole
                 {
-                    Id = "111adw43-k321-542a-aaaf-4g9f03vv0402",
+                    Id = "111AAA43-A321-542A-AAAF-4F9F03FF0402",
                     Name = "admin",
                     NormalizedName = "ADMIN"
                 });
 
                 modelBuilder.Entity<IdentityUser>().HasData(new IdentityUser
                 {
-                    Id = "222adguu-2g21-h42a-a5af-11111vv35555",
+                    Id = "222AAAAA-2A21-F42A-F5AF-11111FF35555",
                     UserName = "admin",
                     NormalizedUserName = "ADMIN",
                     Email = "admin@email.com",
@@ -39,27 +39,27 @@ namespace FirstWeb.Domain
 
                 modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
                 {
-                    RoleId = "111adw43-k321-542a-aaaf-4g9f03vv0402",
-                    UserId = "222adguu-2g21-h42a-a5af-11111vv35555"
+                    RoleId = "111DDD43-F321-542a-AFFF-4A9F03FF0402",
+                    UserId = "222DDDDD-2A21-A42C-C5AA-11111AA35555"
                 });
 
                 modelBuilder.Entity<TextField>().HasData(new TextField
                 {
-                    Id = new Guid("11111111-1151-ddc2-a3af-2id93lvbd023"),
+                    Id = new Guid("11111111-1151-DDC2-A3AF-2DD93DDDD023"),
                     CodeWord = "PageIndex",
                     Title = "Главная"
                 });
                 
                 modelBuilder.Entity<TextField>().HasData(new TextField
                 {
-                    Id = new Guid("22222222-1151-ddc2-a3af-2id93lvbd023"),
+                    Id = new Guid("22222222-1151-DDC2-A3AF-2DD93DDDD023"),
                     CodeWord = "PageServices",
                     Title = "Услуги"
                 });
                 
                 modelBuilder.Entity<TextField>().HasData(new TextField
                 {
-                    Id = new Guid("33333333-1151-ddc2-a3af-2id93lvbd023"),
+                    Id = new Guid("33333333-1151-DDC2-A3AF-2DD93DDDD023"),
                     CodeWord = "PageContacts",
                     Title = "Контакты"
                 });
