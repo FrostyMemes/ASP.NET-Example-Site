@@ -39,8 +39,8 @@ namespace FirstWeb.Domain
 
                 modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
                 {
-                    RoleId = "111DDD43-F321-542a-AFFF-4A9F03FF0402",
-                    UserId = "222DDDDD-2A21-A42C-C5AA-11111AA35555"
+                    RoleId = "111AAA43-A321-542A-AAAF-4F9F03FF0402",
+                    UserId = "222AAAAA-2A21-F42A-F5AF-11111FF35555"
                 });
 
                 modelBuilder.Entity<TextField>().HasData(new TextField
