@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace FirstWeb.Service
 {
-    public class AdminAreaAutorization
+    public class AdminAreaAutorization: IControllerModelConvention
     {
         private readonly string area;
         private readonly string policy;
