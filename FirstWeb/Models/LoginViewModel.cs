@@ -9,7 +9,7 @@ namespace FirstWeb.Models
         public string UserName { get; set; }
         
         [Required] 
-        [UIHint("password")] 
+       // [UIHint("password")] 
         [Display(Name = "Пароль")] 
         public string Password { get; set; }
         
