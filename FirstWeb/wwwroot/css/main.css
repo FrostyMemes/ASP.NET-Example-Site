@@ -147,6 +147,7 @@ input, select, textarea {
 		text-decoration: none;
 		color: #585858;
 		border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
+		display: block;
 	}
 
 		a:hover {
