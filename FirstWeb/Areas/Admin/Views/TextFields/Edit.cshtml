@@ -1,4 +1,5 @@
 ﻿@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@using System.Net.Mime
 @model TextField
 @{
     string strTitle = "Редактировать запись";
@@ -26,6 +27,29 @@
                 <textarea asp-for="Text"></textarea>
                 <span asp-validation-for="Text"></span>
             </div>
+            <div>
+                <label asp-for="MetaTitle"></label>
+                <textarea asp-for="MetaTitle"></textarea>
+                <span asp-validation-for="MetaTitle"></span>
+            </div>
+            <div>
+                <label asp-for="MetaDescription"></label>
+                <textarea asp-for="MetaDescription"></textarea>
+                <span asp-validation-for="MetaDescription"></span>
+            </div>
+            <div>
+                <label asp-for="MetaKeywords"></label>
+                <textarea asp-for="MetaKeywords"></textarea>
+                <span asp-validation-for="MetaKeywords"></span>
+            </div>
+            <input type="submit" value="Сохранить"/>
         </form>
     </div>
 </div>
+
+<script>
+    window.onload = function (){
+        var newCKEdit = CKEDITOR.replace('@Html.IdFor(x=>x.Text)');
+        newCKEdit.updateElement();
+    }
+</script>
