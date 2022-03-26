@@ -19,7 +19,8 @@ namespace FirstWeb.Areas.Admin.Controllers
             var entity = dataManager.TextFields.GetTextFieldByCodeWord(codeWord);
             return View(entity);
         }
-
+        
+        [HttpPost]
         public IActionResult Edit(TextField model)
         {
             if (ModelState.IsValid)
