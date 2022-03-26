@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FirstWeb.Migrations
 {
-    public partial class _initial : Migration
+    public partial class _correct_init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -51,10 +51,9 @@ namespace FirstWeb.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CodeWord = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Subtitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Text = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TitleImagePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MetaTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MetaDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -195,21 +194,21 @@ namespace FirstWeb.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "111AAA43-A321-542A-AAAF-4F9F03FF0402", "78d7770b-d508-42da-8c18-b300db128f50", "admin", "ADMIN" });
+                values: new object[] { "111AAA43-A321-542A-AAAF-4F9F03FF0402", "1547d2e3-3a4a-4ec6-b12f-44bfdf407a3f", "admin", "ADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "222AAAAA-2A21-F42A-F5AF-11111FF35555", 0, "e2364478-081d-4e63-a63c-832aa6700f06", "admin@email.com", true, false, null, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEBd1yGDmCCKWQFbsGMVh2zdfSszilWpbvrvlpCkYzhbyWV7wAswODIymiIog7Q9C2w==", null, false, "", false, "admin" });
+                values: new object[] { "222AAAAA-2A21-F42A-F5AF-11111FF35555", 0, "bd8dd574-96bd-4634-8af1-4fb1b7106aa6", "admin@email.com", true, false, null, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAECHtfw3N/ha7VAIEcfmswx+jVqtikh/4P3xFjpBqxJXyJKGeYZlAfaBvaOiIZDbEww==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "TextFields",
                 columns: new[] { "Id", "CodeWord", "DateAdded", "MetaDescription", "MetaKeywords", "MetaTitle", "Subtitle", "Text", "Title", "TitleImagePath" },
                 values: new object[,]
                 {
-                    { new Guid("11111111-1151-ddc2-a3af-2dd93dddd023"), "PageIndex", new DateTime(2022, 3, 15, 21, 8, 1, 463, DateTimeKind.Utc).AddTicks(3898), null, null, null, null, "Содержание заполняется администратором", "Главная", null },
-                    { new Guid("22222222-1151-ddc2-a3af-2dd93dddd023"), "PageServices", new DateTime(2022, 3, 15, 21, 8, 1, 463, DateTimeKind.Utc).AddTicks(7646), null, null, null, null, "Содержание заполняется администратором", "Услуги", null },
-                    { new Guid("33333333-1151-ddc2-a3af-2dd93dddd023"), "PageContacts", new DateTime(2022, 3, 15, 21, 8, 1, 463, DateTimeKind.Utc).AddTicks(7734), null, null, null, null, "Содержание заполняется администратором", "Контакты", null }
+                    { new Guid("11111111-1151-ddc2-a3af-2dd93dddd023"), "PageIndex", new DateTime(2022, 3, 26, 16, 3, 4, 910, DateTimeKind.Utc).AddTicks(3973), null, null, null, null, "Содержание заполняется администратором", "Главная", null },
+                    { new Guid("22222222-1151-ddc2-a3af-2dd93dddd023"), "PageServices", new DateTime(2022, 3, 26, 16, 3, 4, 910, DateTimeKind.Utc).AddTicks(5282), null, null, null, null, "Содержание заполняется администратором", "Услуги", null },
+                    { new Guid("33333333-1151-ddc2-a3af-2dd93dddd023"), "PageContacts", new DateTime(2022, 3, 26, 16, 3, 4, 910, DateTimeKind.Utc).AddTicks(5310), null, null, null, null, "Содержание заполняется администратором", "Контакты", null }
                 });
 
             migrationBuilder.InsertData(

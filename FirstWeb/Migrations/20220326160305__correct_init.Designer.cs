@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FirstWeb.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220315210801__initial")]
-    partial class _initial
+    [Migration("20220326160305__correct_init")]
+    partial class _correct_init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,10 +26,6 @@ namespace FirstWeb.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CodeWord")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateAdded")
                         .HasColumnType("datetime2");
@@ -50,6 +46,7 @@ namespace FirstWeb.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TitleImagePath")
@@ -103,7 +100,7 @@ namespace FirstWeb.Migrations
                         {
                             Id = new Guid("11111111-1151-ddc2-a3af-2dd93dddd023"),
                             CodeWord = "PageIndex",
-                            DateAdded = new DateTime(2022, 3, 15, 21, 8, 1, 463, DateTimeKind.Utc).AddTicks(3898),
+                            DateAdded = new DateTime(2022, 3, 26, 16, 3, 4, 910, DateTimeKind.Utc).AddTicks(3973),
                             Text = "Содержание заполняется администратором",
                             Title = "Главная"
                         },
@@ -111,7 +108,7 @@ namespace FirstWeb.Migrations
                         {
                             Id = new Guid("22222222-1151-ddc2-a3af-2dd93dddd023"),
                             CodeWord = "PageServices",
-                            DateAdded = new DateTime(2022, 3, 15, 21, 8, 1, 463, DateTimeKind.Utc).AddTicks(7646),
+                            DateAdded = new DateTime(2022, 3, 26, 16, 3, 4, 910, DateTimeKind.Utc).AddTicks(5282),
                             Text = "Содержание заполняется администратором",
                             Title = "Услуги"
                         },
@@ -119,7 +116,7 @@ namespace FirstWeb.Migrations
                         {
                             Id = new Guid("33333333-1151-ddc2-a3af-2dd93dddd023"),
                             CodeWord = "PageContacts",
-                            DateAdded = new DateTime(2022, 3, 15, 21, 8, 1, 463, DateTimeKind.Utc).AddTicks(7734),
+                            DateAdded = new DateTime(2022, 3, 26, 16, 3, 4, 910, DateTimeKind.Utc).AddTicks(5310),
                             Text = "Содержание заполняется администратором",
                             Title = "Контакты"
                         });
@@ -155,7 +152,7 @@ namespace FirstWeb.Migrations
                         new
                         {
                             Id = "111AAA43-A321-542A-AAAF-4F9F03FF0402",
-                            ConcurrencyStamp = "78d7770b-d508-42da-8c18-b300db128f50",
+                            ConcurrencyStamp = "1547d2e3-3a4a-4ec6-b12f-44bfdf407a3f",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -254,13 +251,13 @@ namespace FirstWeb.Migrations
                         {
                             Id = "222AAAAA-2A21-F42A-F5AF-11111FF35555",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e2364478-081d-4e63-a63c-832aa6700f06",
+                            ConcurrencyStamp = "bd8dd574-96bd-4634-8af1-4fb1b7106aa6",
                             Email = "admin@email.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MY@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBd1yGDmCCKWQFbsGMVh2zdfSszilWpbvrvlpCkYzhbyWV7wAswODIymiIog7Q9C2w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECHtfw3N/ha7VAIEcfmswx+jVqtikh/4P3xFjpBqxJXyJKGeYZlAfaBvaOiIZDbEww==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
