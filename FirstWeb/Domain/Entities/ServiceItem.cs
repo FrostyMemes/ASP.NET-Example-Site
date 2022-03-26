@@ -6,7 +6,7 @@ namespace FirstWeb.Domain.Entities
     {
         [Required(ErrorMessage = "Заполните название услуги")]
         [Display(Name = "Название услуги")]
-        public string CodeWord { get; set; }
+        public override string Title { get; set; }
 
         [Display(Name = "Краткое описание услуги")]
         public override string Subtitle { get; set; }
