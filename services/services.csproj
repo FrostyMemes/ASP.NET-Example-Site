@@ -5,7 +5,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Models\ViewComponents" />
       <Folder Include="Views\Home\" />
       <Folder Include="wwwroot\css" />
       <Folder Include="wwwroot\images" />
