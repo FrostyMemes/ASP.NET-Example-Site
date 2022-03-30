@@ -18,12 +18,13 @@
 
 				<!-- Menu -->
 				@await	Html.PartialAsync("MenuPartial")	
-
+				<div>
 				<!-- Main -->
-					<div id="main">
-						@RenderBody()
-					</div>
-
+				<div id="main">
+					@RenderBody()
+				</div>
+				@await	Html.PartialAsync("SidebarPartial")
+				</div>
 				<!-- Footer -->
 				@await	Html.PartialAsync("FooterPartial")
 
